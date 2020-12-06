@@ -1,4 +1,3 @@
-import Formulario from "./components/FormularioCadastro";
 import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/FormularioCadastro";
 
