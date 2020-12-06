@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class FormularioCadastro extends Component {
+class FormularioCadastro extends Component {
   render() {
     return (
       <form>
@@ -11,3 +11,5 @@ export default class FormularioCadastro extends Component {
     );
   }
 }
+
+export default FormularioCadastro;
