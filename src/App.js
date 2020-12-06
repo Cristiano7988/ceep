@@ -1,4 +1,4 @@
-import ListaDeNotas from "./components/ListaDeNotas";
+import ListaDeNotas from "./components/ListaDeNotas/ListaDeNotas";
 import FormularioCadastro from "./components/FormularioCadastro";
 import { Component } from "react";
 

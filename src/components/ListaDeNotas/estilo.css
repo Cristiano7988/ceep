@@ -1,0 +1,10 @@
+.unorder-list {
+    padding: 0 20px;
+}
+.list-item {
+    list-style: none;
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
