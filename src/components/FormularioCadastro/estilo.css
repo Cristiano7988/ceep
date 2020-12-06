@@ -1,0 +1,18 @@
+.formulario-cadastro {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color: cadetblue;
+}
+
+.input-titulo, .input-nota, .btn {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.btn {
+    padding: 5px;
+    border-radius: 10px;
+    background-color: darkorange;
+    font-weight: bold;
+}

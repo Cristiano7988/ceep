@@ -1,10 +1,22 @@
-.unorder-list {
-    padding: 0 20px;
+.lista-notas {
+    padding: 20px;
+    font-family: sans-serif;
 }
+
+.lista-notas h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .list-item {
     list-style: none;
     background-color: lightblue;
     padding: 20px;
     border-radius: 10px;
     margin: 20px 0;
+    box-shadow: 5px 5px 5px lightgrey;
+}
+
+.list-item  * {
+    margin-bottom: 5px;
 }
