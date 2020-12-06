@@ -8,16 +8,13 @@ class ListaDeNotas extends Component {
       <section className="lista-notas">
         <h1>Lista de Notas</h1>
         <ul className="unorder-list">
-          {Array.of("Trabalho", "Trabalho", "Estudos").map(
-            (categoria, index) => {
-              return (
-                <li key={index} className="list-item">
-                  <div>{categoria}</div>
-                  <CardNota />
-                </li>
-              );
-            }
-          )}
+          {this.props.notas.map((nota, index) => {
+            return (
+              <li key={index} className="list-item">
+                <CardNota titulo={nota.titulo} texto={nota.texto} />
+              </li>
+            );
+          })}
         </ul>
       </section>
     );
