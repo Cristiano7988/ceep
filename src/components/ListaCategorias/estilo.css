@@ -1,0 +1,18 @@
+.container-lista-categorias {
+    padding: 20px;
+    width: 100%;
+}
+.lista-categorias {
+    padding-bottom: 20px ;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.categoria {
+    background-color: cadetblue;
+    color: white;
+    display: inline-flex;
+    padding: 5px 10px;
+    margin: 3px;
+    border-radius: 20px;
+}
