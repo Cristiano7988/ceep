@@ -15,6 +15,7 @@ class CardNota extends Component {
           <DeleteSVG onClick={this.apagar.bind(this)} />
         </header>
         <p>{this.props.texto}</p>
+        <h4>{this.props.categoria}</h4>
       </section>
     );
   }
