@@ -1,49 +1,32 @@
 import ListaDeNotas from "./components/ListaDeNotas";
 import FormularioCadastro from "./components/FormularioCadastro";
-import ListaCategorias from "./components/ListaCategorias";
+import ListaDeCategorias from "./components/ListaDeCategorias";
 import { Component } from "react";
+import Categorias from "./dados/Categorias";
+import ArrayDeNotas from "./dados/Notas";
 
 class App extends Component {
   constructor() {
     super();
-    this.state = {
-      notas: [],
-      categorias: [],
-    };
-  }
-  criarNota(titulo, texto, categoria) {
-    const novaNota = { titulo, texto, categoria };
-    const novoArrayNotas = [...this.state.notas, novaNota];
-    const novoEstado = {
-      notas: novoArrayNotas,
-    };
-    this.setState(novoEstado);
-  }
-
-  apagarNota(indice) {
-    let ArrayNotas = this.state.notas;
-    ArrayNotas.splice(indice, 1);
-    this.setState({ notas: ArrayNotas });
-  }
-
-  adicionarCategoria(categoria) {
-    const novoArray = [...this.state.categorias, categoria];
-    const novoEstado = {...this.state, categorias: novoArray};
-    this.setState( novoEstado );
+    this.categorias = new Categorias();
+    this.notas = new ArrayDeNotas();
   }
 
   render() {
     return (
       <section className="main-section">
-        <FormularioCadastro categorias={this.state.categorias} criarNota={this.criarNota.bind(this)} />
+        <FormularioCadastro
+          categorias={this.categorias}
+          criarNota={this.notas.adicionarNota.bind(this.notas)}
+        />
         <main>
-          <ListaCategorias
-            categorias={this.state.categorias}
-            adicionarCategoria={this.adicionarCategoria.bind(this)}
+          <ListaDeCategorias
+            adicionarCategoria={this.categorias.adicionarCategoria.bind(this.categorias)}
+            categorias={this.categorias}
           />
           <ListaDeNotas
-            notas={this.state.notas}
-            apagarNota={this.apagarNota.bind(this)}
+            apagarNota={this.notas.apagarNota.bind(this.notas)}
+            notas={this.notas}
           />
         </main>
       </section>
